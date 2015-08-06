@@ -1,5 +1,5 @@
 // Databricks notebook source exported at Thu, 6 Aug 2015 18:48:05 UTC
-val a = sc.parallelize(List("dog","cat","gnu","salmon","rabbit","turkey","wolf","bear","bee","tiger"), 3)
+val a = sc.parallelize(List("dog","cat","gnu","salmon","rabbit","turkey","wolf","bear","bee","tiger","bumblebee"), 3)
 val b = sc.parallelize(List(1,1,2,2,2,1,2,2,2), 3)
 val c = b.zip(a)
 val d = c.combineByKey(List(_), (x:List[String], y:String) => y :: x, (x:List[String], y:List[String]) => x ::: y)
