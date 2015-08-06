@@ -11,7 +11,7 @@ c.collect
 // COMMAND ----------
 
 
-val a = sc.parallelize(List("dog", "salmon", "salmon", "rat", "elephant"), 3)
+val a = sc.parallelize(List("dog", "salmon", "salmon", "rat", "elephant", "turtle"), 3)
 val b = a.keyBy(_.length)
 val c = sc.parallelize(List("dog","cat","gnu","salmon","rabbit","turkey","wolf","bear","bee"), 3)
 val d = c.keyBy(_.length)
